@@ -2,6 +2,7 @@ import React from 'react';
 import Image from "next/image";
 import {Movie} from "@/typing";
 type ThumbnailProps={
+    // movie: Movie | DocumentData
     movie:Movie
 }
 const Thumbnail = ({movie}:ThumbnailProps) => {
