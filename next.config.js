@@ -2,8 +2,12 @@
 
 const nextConfig = {
   reactStrictMode: true,
+    webp: {
+        preset: "default",
+        quality: 100
+    },
   images: {
-        domains: ['image.tmdb.org']
+        domains: ['rb.gy','image.tmdb.org']
       }
 }
 

@@ -14,6 +14,9 @@
         @apply fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6;
     }
 }
+.input {
+        @apply w-full rounded bg-[#333333] px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];
+}
 
 @layer components {
     .headerLink {

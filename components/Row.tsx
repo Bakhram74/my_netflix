@@ -10,8 +10,10 @@ type RowProps = {
 }
 
 const Row = ({title,movies}:RowProps) => {
+
     const rowRef =useRef<HTMLDivElement|any>(null)
     const [isMoved, setIsMoved] = useState(false)
+
 const handleClick = (direction:string)=>{
     setIsMoved(true)
     if (rowRef.current) {
@@ -24,6 +26,7 @@ const handleClick = (direction:string)=>{
         rowRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' })
     }
 }
+
     return (
         <div className={'h-40 space-y-0.5 md:space-y-2'}>
 

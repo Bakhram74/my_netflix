@@ -16,7 +16,7 @@ const Banner = ({netflixOriginals}:BannerProps) => {
     },[netflixOriginals])
 
     return (
-        <div className={'flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'}>
+        <div className={'flex flex-col space-y-2  py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'}>
 <div className={'absolute top-0 left-0 w-screen -z-10 h-[95vh]'}>
     <Image
         fill
@@ -24,7 +24,7 @@ const Banner = ({netflixOriginals}:BannerProps) => {
         objectFit="cover"
      alt={''}/>
 </div>
-            <h1 className={'text-2xl font-bold md:text-4xl lg:text-7xl'}>
+            <h1 className={'text-2xl font-bold md:text-4xl lg:text-7xl md:space-y-24'}>
                 {movie?.title||movie?.name||movie?.original_name}</h1>
         <p className={'max-w-xs text-xs drop-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl'}>
             {movie?.overview}
