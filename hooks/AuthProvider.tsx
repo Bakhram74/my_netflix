@@ -33,10 +33,12 @@ const AuthContext = createContext<IAuth>({
     error: null,
     loading: false,
 })
-
-export const AuthProvider=({children}:ReactNode)=>{
+interface IAuthProvider{
+    children:ReactNode
+}
+export const AuthProvider=({children}:IAuthProvider)=>{
 const [loading,setLoading] = useState(false)
-const [error,setError] = useState<string>(null)
+const [error,setError] = useState(null)
     const [initialLoading, setInitialLoading] = useState(true)
     const [user,setUser] = useState<User|null>(null)
     const router = useRouter()

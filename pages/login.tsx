@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {SubmitHandler, useForm} from "react-hook-form";
 import Head from "next/head";
 import Image from 'next/image'
-import {useAuth} from "@/hooks/useAuth";
+import {useAuth} from "@/hooks/AuthProvider";
 
 type Inputs = {
     email: string,
@@ -20,7 +20,7 @@ const Login = () => {
             await signUp(email,password)
         }
     };
-    const contentfulLoader = ({src, quality, width}) => {
+    const contentfulLoader = ({src, quality, width}:any) => {
         const params = [`w=${width}`];
 
         if (quality) {
