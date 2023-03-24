@@ -21,7 +21,7 @@ const Banner = ({netflixOriginals}:BannerProps) => {
     <Image
         fill
         src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
-        objectFit="cover"
+        className={'object-cover'}
      alt={''}/>
 </div>
             <h1 className={'text-2xl font-bold md:text-4xl lg:text-7xl md:space-y-24'}>
