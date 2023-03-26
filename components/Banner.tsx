@@ -4,13 +4,15 @@ import {baseUrl} from "@/constans/movie";
 import Image from "next/image"
 import { FaPlay } from 'react-icons/fa';
 import {InformationCircleIcon} from "@heroicons/react/20/solid";
+import {useRecoilState} from "recoil";
+import {modalState} from "@/atoms/modalAtom";
 interface BannerProps{
     netflixOriginals:Movie[]
 }
 
 const Banner = ({netflixOriginals}:BannerProps) => {
     const [movie,setMovie] = useState<Movie|null>(null)
-
+    const [showModal,setShowModal] = useRecoilState(modalState)
     useLayoutEffect(()=>{
         setMovie(netflixOriginals[Math.floor(Math.random()*netflixOriginals.length)])
     },[netflixOriginals])
