@@ -7,6 +7,6 @@ export const modalState = atom({
     default: false,
 });
 export const movieState = atom<Movie|null|DocumentData>({
-    key: 'modal',
+    key: 'movie',
     default: null,
 });

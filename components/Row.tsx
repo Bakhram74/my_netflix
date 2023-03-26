@@ -1,6 +1,6 @@
 import React, {MutableRefObject, useRef, useState} from 'react';
 import {Movie} from "@/typing";
-import {ChevronRightIcon,ChevronLeftIcon} from "@heroicons/react/24/outline";
+import {ChevronRightIcon,ChevronLeftIcon} from "@heroicons/react/outline";
 import Thumbnail from "@/components/Thumbnail";
 
 type RowProps = {

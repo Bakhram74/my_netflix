@@ -1,5 +1,5 @@
 
-import { BellIcon, MagnifyingGlassIcon } from '@heroicons/react/24/solid'
+import { BellIcon, SearchIcon } from '@heroicons/react/solid'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import {useAuth} from "@/hooks/AuthProvider";
@@ -46,7 +46,7 @@ function Header() {
                 </ul>
             </div>
             <div className="flex items-center space-x-4 text-sm font-light">
-                <MagnifyingGlassIcon className="sm hidden h-6 w-6 sm:inline" />
+                <SearchIcon className="sm hidden h-6 w-6 sm:inline" />
                 <p className="hidden lg:inline">Kids</p>
                 <BellIcon className="h-6 w-6" />
                 {/*<Link href="/account">*/}
