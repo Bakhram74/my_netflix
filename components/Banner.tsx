@@ -5,16 +5,16 @@ import Image from "next/image"
 import { FaPlay } from 'react-icons/fa';
 import {InformationCircleIcon} from "@heroicons/react/solid";
 import {useRecoilState} from "recoil";
-import {modalState} from "@/atoms/modalAtom";
+import {modalState, movieState} from "@/atoms/modalAtom";
 interface BannerProps{
     netflixOriginals:Movie[]
 }
 
 const Banner = ({netflixOriginals}:BannerProps) => {
     const [movie,setMovie] = useState<Movie|null>(null)
-    const [currentMovie,setCurrentMovie] = useState<Movie|null>(null)
+    const [currentMovie, setCurrentMovie] = useRecoilState(movieState)
     const [showModal,setShowModal] = useRecoilState(modalState)
-    useLayoutEffect(()=>{
+    useEffect(()=>{
         setMovie(netflixOriginals[Math.floor(Math.random()*netflixOriginals.length)])
     },[netflixOriginals])
 
