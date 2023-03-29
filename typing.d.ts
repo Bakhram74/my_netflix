@@ -22,7 +22,7 @@ export interface Movie {
     vote_count: number
 }
 
-export interface Element {
+export interface IElement {
     type:
         | 'Bloopers'
         | 'Featurette'

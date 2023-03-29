@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useRecoilState, useRecoilValue} from "recoil";
 import {modalState, movieState} from "@/atoms/modalAtom";
 import {PlusIcon, ThumbUpIcon, VolumeOffIcon, VolumeUpIcon, XIcon,} from '@heroicons/react/outline'
-import Element, {Genre} from './../typing'
+import  {IElement,Genre} from '@/typing'
 import ReactPlayer from 'react-player/lazy'
 import {FaPlay} from "react-icons/fa";
 
@@ -31,7 +31,7 @@ function Modal() {
                 .catch(error => console.log(error.message))
 
             if (data.videos.results) {
-                const index = data.videos.results.findIndex((element: Element) => element.type === 'Trailer')
+                const index = data.videos.results.findIndex((element: IElement) => element.type === 'Trailer')
                 setTrailer(data.videos.results[index]?.key)
             }
             if (data?.genres) {
